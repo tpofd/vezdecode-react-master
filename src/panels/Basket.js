@@ -108,28 +108,17 @@ const Basket = ({
           <span>Назначить</span>
           <input type="time"
             value={time}
-            onFocus={() => {
-              onSetFaster(false);
-            }}
-            onChange={(event) => {
-              const { value } = event.target;
-              if (!value) {
-                onSetTime(value);
-              } else {
-                const newValue = parseInt(value);
-                if (isNaN(newValue)) {
-                  return;
-                }
+            onFocus={() => {onSetFaster(false);}}
+            onChange={event => {
                 onSetFaster(false);
-                onSetTime(newValue);
+                onSetTime(event.target.value);
               }
-            }}
+            }
             onBlur={() => {
               if (time) {
                 onSetFaster(false);
               }
-            }}
-          />
+            }}></input>
         </div>
         <div className="Place__choice-item">
           <h3>С собой</h3>
