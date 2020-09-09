@@ -109,7 +109,7 @@ const Basket = ({
           <input type="time"
             value={time}
             onFocus={() => {onSetFaster(false);}}
-            onChange={event => {
+            onChange={(event) => {
                 onSetFaster(false);
                 onSetTime(event.target.value);
               }
@@ -140,7 +140,7 @@ const Basket = ({
           to={+price ? `/order/${area.id}/${item.id}` : pathname}
           className="Place__order"
         >
-          Оплатить {price}
+          Оплатить ({price})
         </Link>
       </footer>
     </div>
