@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-"dev": "react-scripts start",
-    "start": "cross-env NODE_ENV=production node server",
+    "start": "cross-env PORT=10888 react-scripts start",
     "build": "react-scripts build",
-    "heroku-postbuild": "npm run build"
+    "surge-deploy": "npm run build && surge ./build --domain kozodoi-club-hack.surge.sh"
   },
   "keywords": [],
   "author": "",
